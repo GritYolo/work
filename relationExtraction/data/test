@@ -1,0 +1,27 @@
+import numpy as np
+import sys
+from math import *
+import matplotlib.pyplot as plt
+
+def plotf(f,xmin,xmax):
+    f = sys.argv[1]
+    xmin = sys.argv[2]
+    xmax = sys.argv[3]
+    # if len(sys.argv)==5:
+    plotf(f, xmin, xmax)
+    return f,xmin,xmax
+    x=np.linspace(xmin,xmax,1000)
+    y=f
+    plt.plot(x,y)
+    plt.show()
+    plt.savefig('tmp1.pdf')
+
+#if __name__=='__main__':
+    f=sys.argv[1]
+    xmin=sys.argv[2]
+    xmax=sys.argv[3]
+    #if len(sys.argv)==5:
+    plotf(f,xmin,xmax)
+
+    #else:
+        #print('wrong!')
